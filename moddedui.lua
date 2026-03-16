@@ -1,6 +1,6 @@
 getgenv().MainColor = Color3.fromRGB(15, 15, 15)
 getgenv().SecondColor = Color3.fromRGB(15, 15, 15)
-getgenv().StrokeColor = Color3.fromRGB(255, 0, 255)
+getgenv().StrokeColor = Color3.fromRGB(255, 0, 0)
 getgenv().DividerColor = Color3.fromRGB(128, 128, 128)
 getgenv().TextColor = Color3.fromRGB(255, 255, 255)
 getgenv().TextDarkColor = Color3.fromRGB(255, 255, 255)
@@ -15,19 +15,19 @@ function IC()
 		getgenv().SecondColor = Color3.fromRGB(15, 15, 15)
 	end
 	if not getgenv().StrokeColor then
-		getgenv().StrokeColor = Color3.fromRGB(255, 0, 255) 
+		getgenv().StrokeColor = Color3.fromRGB(255, 0, 0)
 	end
 	if not getgenv().DividerColor then
 		getgenv().DividerColor = Color3.fromRGB(128, 128, 128)
 	end
 	if not getgenv().TextColor then
-		getgenv().TextColor = Color3.fromRGB(255, 0, 255)
+		getgenv().TextColor = Color3.fromRGB(255, 0, 0)
 	end
 	if not getgenv().TextDarkColor then
 		getgenv().TextDarkColor = Color3.fromRGB(150, 150, 150)
 	end
 	if not getgenv().OtherTextColor then
-		getgenv().OtherTextColor = Color3.fromRGB(255, 0, 255)
+		getgenv().OtherTextColor = Color3.fromRGB(255, 0, 0)
 	end
 end
 IC()
