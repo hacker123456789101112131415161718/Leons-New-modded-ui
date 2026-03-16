@@ -15,7 +15,7 @@ function IC()
 		getgenv().SecondColor = Color3.fromRGB(15, 15, 15)
 	end
 	if not getgenv().StrokeColor then
-		getgenv().StrokeColor = Color3.fromRGB(255, 0, 0)
+		getgenv().StrokeColor = Color3.fromRGB(255, 0, 0) 
 	end
 	if not getgenv().DividerColor then
 		getgenv().DividerColor = Color3.fromRGB(128, 128, 128)
@@ -30,6 +30,10 @@ function IC()
 		getgenv().OtherTextColor = Color3.fromRGB(255, 0, 0)
 	end
 end
+
+
+
+
 IC()
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -492,7 +496,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 				Font = Enum.Font.GothamSemibold,
 				Name = "Content",
 				AutomaticSize = Enum.AutomaticSize.Y,
-				TextColor3 = Color3.fromRGB(255, 0, 255),
+				TextColor3 = Color3.fromRGB(255, 0, 0),
 				TextWrapped = true
 			})
 		})
@@ -552,7 +556,7 @@ local function CreateTooltip()
 	})
 
 	Create("UIStroke", {
-		Color = Color3.fromRGB(255, 0, 255),
+		Color = Color3.fromRGB(255, 0, 0),
 		Thickness = 2,
 		Transparency = 0,
 		Parent = TooltipFrame
@@ -597,7 +601,7 @@ local function CreateTooltip()
 		Name = "InnerGlow",
 		Size = UDim2.new(1, -4, 1, -4),
 		Position = UDim2.new(0, 2, 0, 2),
-		BackgroundColor3 = Color3.fromRGB(255, 0, 255),
+		BackgroundColor3 = Color3.fromRGB(255, 0, 0),
 		BackgroundTransparency = 0.9,
 		BorderSizePixel = 0,
 		ZIndex = 9999,
@@ -819,7 +823,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		end	
 	end
 
-	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 0, 255), 4), {
+	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 0, 0), 4), {
 		Size = UDim2.new(1, 0, 1, -50)
 	}), {
 		MakeElement("List"),
@@ -934,13 +938,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		Size = UDim2.new(0, getgenv().WindowWidth, 0, getgenv().WindowHeight),
 		ClipsDescendants = true
 	}), {
-		--SetProps(MakeElement("Image", "rbxassetid://3523728077"), {
-		--	AnchorPoint = Vector2.new(0.5, 0.5),
-		--	Position = UDim2.new(0.5, 0, 0.5, 0),
-		--	Size = UDim2.new(1, 80, 1, 320),
-		--	ImageColor3 = Color3.fromRGB(33, 33, 33),
-		--	ImageTransparency = 0.7
-		--}),
 		SetChildren(SetProps(MakeElement("TFrame"), {
 			Size = UDim2.new(1, 0, 0, 50),
 			Name = "TopBar"
@@ -1268,7 +1265,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
 				ToggleConfig.Default = ToggleConfig.Default or false
 				ToggleConfig.Callback = ToggleConfig.Callback or function() end
-				ToggleConfig.Color = Color3.fromRGB(255, 0, 255)
+				ToggleConfig.Color = Color3.fromRGB(255, 0, 0)
 				ToggleConfig.ColorOff = Color3.fromRGB(15, 15, 15)
 				ToggleConfig.Flag = ToggleConfig.Flag or nil
 				ToggleConfig.Save = ToggleConfig.Save or false
@@ -1531,7 +1528,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				SliderConfig.Default = SliderConfig.Default or 50
 				SliderConfig.Callback = SliderConfig.Callback or function() end
 				SliderConfig.ValueName = SliderConfig.ValueName or ""
-				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(255, 0, 255)
+				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(255, 0, 0)
 				SliderConfig.Flag = SliderConfig.Flag or nil
 				SliderConfig.Save = SliderConfig.Save or false
 				SliderConfig.ToolTip = SliderConfig.ToolTip or ""
@@ -1616,8 +1613,8 @@ function OrionLib:MakeWindow(WindowConfig)
 					SetProps(Create("UIGradient", {
 						Rotation = 90,
 						Color = ColorSequence.new({
-							ColorSequenceKeypoint.new(0, Color3.fromRGB(210, 80, 210)),
-							ColorSequenceKeypoint.new(1, Color3.fromRGB(150, 0, 150))
+							ColorSequenceKeypoint.new(0, Color3.fromRGB(210, 80, 80)),
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(150, 0, 0))
 						})
 					}), {Name = "Gradient"})
 				})
@@ -1641,7 +1638,7 @@ function OrionLib:MakeWindow(WindowConfig)
 						Rotation = 135,
 						Color = ColorSequence.new({
 							ColorSequenceKeypoint.new(0, Color3.fromRGB(250, 250, 255)),
-							ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 220, 240))
+							ColorSequenceKeypoint.new(1, Color3.fromRGB(240, 220, 220))
 						})
 					}), {Name = "Gradient"})
 				})
@@ -1876,7 +1873,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			end
 
 			local DropdownList = MakeElement("List")
-			local DropdownContainer = AddThemeObject(SetProps(SetChildren(MakeElement("ScrollFrame", Color3.fromRGB(255,0,255),4), {DropdownList}), {
+			local DropdownContainer = AddThemeObject(SetProps(SetChildren(MakeElement("ScrollFrame", Color3.fromRGB(255, 0, 0), 4), {DropdownList}), {
 				Parent = ItemParent,
 				Position = UDim2.new(0,0,0,38),
 				Size = UDim2.new(1,0,1,-38),
@@ -1893,7 +1890,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			}), "OtherText")
 			
 			local Click = SetProps(MakeElement("Button"), {Size = UDim2.new(1,0,1,0)})
-			local DropdownFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255,0,255),0,5), {
+			local DropdownFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 0, 0), 0, 5), {
 				Size = UDim2.new(1,0,0,38),
 				Parent = ItemParent,
 				ClipsDescendants = true
@@ -1910,7 +1907,7 @@ function OrionLib:MakeWindow(WindowConfig)
 						Size = UDim2.new(0,20,0,20),
 						AnchorPoint = Vector2.new(0,0.5),
 						Position = UDim2.new(1,-30,0.5,0),
-						ImageColor3 = Color3.fromRGB(255,0,255),
+						ImageColor3 = Color3.fromRGB(255, 0, 0),
 						Name = "Ico"
 					}), "OtherText"),
 					AddThemeObject(SetProps(MakeElement("Label", GetSmartSelectedText(), 13), {
@@ -1974,7 +1971,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			function AddOptions(options)
 				for _, option in ipairs(options) do
 					local isSelected = DropdownConfig.Multi and table.find(Dropdown.Value, option) or Dropdown.Value == option
-					local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(255,0,255)), {
+					local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(255, 0, 0)), {
 						MakeElement("Corner",0,6),
 						AddThemeObject(SetProps(MakeElement("Label", option, 13, isSelected and 0 or 0.4), {
 							Position = UDim2.new(0, 8, 0, 0),
@@ -2055,7 +2052,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				local function AddOptionsToThisDropdown(optionsList)
 					for _, option in ipairs(optionsList) do
 						local isSelected = DropdownConfig.Multi and table.find(Dropdown.Value, option) or Dropdown.Value == option
-						local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(255,0,255)), {
+						local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(255, 0, 0)), {
 							MakeElement("Corner",0,6),
 							AddThemeObject(SetProps(MakeElement("Label", option, 13, isSelected and 0 or 0.4), {
 								Position = UDim2.new(0, 8, 0, 0),
@@ -2143,7 +2140,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Dropdown:Set(DropdownConfig.Default)
 			end
 
-			InitializeDropdownState() -- Ensure dropdown starts closed
+			InitializeDropdownState()
 
 			if DropdownConfig.Flag then OrionLib.Flags[DropdownConfig.Flag] = Dropdown end
 			if DropdownConfig.ToolTip ~= "" then AddTooltipToElement(DropdownFrame, DropdownConfig.ToolTip) end
@@ -2327,7 +2324,6 @@ function ElementFunction:AddBind(BindConfig)
 				}), "Second")
 
 				AddConnection(TextboxActual:GetPropertyChangedSignal("Text"), function()
-					--TextContainer.Size = UDim2.new(0, TextboxActual.TextBounds.X + 16, 0, 24)
 					TweenService:Create(TextContainer, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, TextboxActual.TextBounds.X + 16, 0, 24)}):Play()
 				end)
 
@@ -2502,7 +2498,7 @@ function ElementFunction:AddBind(BindConfig)
 					Size = UDim2.new(0, SWITCH_WIDTH, 0, SWITCH_HEIGHT),
 					Position = UDim2.new(1, -SWITCH_WIDTH - 12, 0.5, 0),
 					AnchorPoint = Vector2.new(0, 0.5),
-					BackgroundColor3 = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 255) or Color3.fromRGB(15, 15, 15),
+					BackgroundColor3 = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(15, 15, 15),
 					BorderSizePixel = 0,
 					Name = "Switch"
 				})
@@ -2521,7 +2517,7 @@ function ElementFunction:AddBind(BindConfig)
 				})
 
 				local switchStroke = Create("UIStroke", {
-					Color = Color3.fromRGB(255, 0, 255),
+					Color = Color3.fromRGB(255, 0, 0),
 					Thickness = 1,
 					Transparency = ToggleColorPicker.Value and 1 or 0.3,
 					Parent = ToggleSwitch
@@ -2587,7 +2583,7 @@ function ElementFunction:AddBind(BindConfig)
 				}), "Second")
 
 				local function updateToggle(animate)
-					local targetColor = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 255) or Color3.fromRGB(15, 15, 15)
+					local targetColor = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(15, 15, 15)
 					local targetPos = ToggleColorPicker.Value and 
 						UDim2.new(0, SWITCH_WIDTH - CIRCLE_SIZE - PADDING, 0, PADDING) or 
 						UDim2.new(0, PADDING, 0, PADDING)
@@ -2696,7 +2692,7 @@ function ElementFunction:AddBind(BindConfig)
 
 				AddConnection(switchClickDetector.MouseLeave, function()
 					TweenService:Create(ToggleSwitch, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {
-						BackgroundColor3 = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 255) or Color3.fromRGB(15, 15, 15)
+						BackgroundColor3 = ToggleColorPicker.Value and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(15, 15, 15)
 					}):Play()
 					
 					TweenService:Create(switchStroke, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {
@@ -3284,7 +3280,7 @@ function ElementFunction:AddSubTab(SubTabConfig)
 			Parent = Container,
 			LayoutOrder = -999
 		}), {
-			SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 0, 255), 4), {
+			SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 0, 0), 4), {
 				Size = UDim2.new(1, 0, 1, 0),
 				ScrollBarThickness = 0,
 				ScrollingDirection = Enum.ScrollingDirection.X,
